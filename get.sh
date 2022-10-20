@@ -5,11 +5,14 @@ if ! [ -x "$(command -v git)" ]; then
     exit 1
 fi
 
+REPO_URL="git@github.com:wwt/ansible-navigator-dev-container.git"
+BRANCH="ttafsir-get-files"
+
 # clone the repository
 echo "cleaning up previous directory..."
 rm -rf /tmp/ansible-navigator-dev-container
 echo "cloning repository..."
-git clone --branch ttafsir-get-files git@github.com:wwt/ansible-navigator-dev-container.git /tmp/ansible-navigator-dev-container
+git clone --branch $BRANCH $REPO_URL /tmp/ansible-navigator-dev-container
 
 # Copy devcontainer.template.json from the repo and rename to devcontainer.json
 echo "creating .devcontainer directory..."
