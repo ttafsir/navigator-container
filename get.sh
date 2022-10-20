@@ -12,7 +12,7 @@ git checkout ttafsir-get-files
 
 
 # Copy devcontainer.template.json from the repo and rename to devcontainer.json
-mdkir -p .devcontainer
+mdkir .devcontainer
 cp /tmp/ansible-navigator-dev-container/devcontainer.template .devcontainer/devcontainer.json
 
 
