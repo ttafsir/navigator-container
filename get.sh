@@ -6,13 +6,15 @@ if ! [ -x "$(command -v git)" ]; then
 fi
 
 # clone the repository
+echo "cleaning up previous directory..."
 rm -rf /tmp/ansible-navigator-dev-container
+echo "cloning repository..."
 git clone --branch ttafsir-get-files git@github.com:wwt/ansible-navigator-dev-container.git /tmp/ansible-navigator-dev-container
 
 # Copy devcontainer.template.json from the repo and rename to devcontainer.json
+echo "creating .devcontainer directory..."
 mkdir -p .devcontainer
 cp /tmp/ansible-navigator-dev-container/devcontainer.template .devcontainer/devcontainer.json
-
 
 # Copy the dockerfile from the repo
 cp /tmp/ansible-navigator-dev-container/Dockerfile .
