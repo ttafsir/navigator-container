@@ -6,6 +6,7 @@ if ! [ -x "$(command -v git)" ]; then
 fi
 
 # clone the repository
+rm -rf /tmp/ansible-navigator-dev-container
 git clone git@github.com:wwt/ansible-navigator-dev-container.git /tmp/ansible-navigator-dev-container
 
 
