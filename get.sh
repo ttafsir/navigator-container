@@ -7,9 +7,7 @@ fi
 
 # clone the repository
 rm -rf /tmp/ansible-navigator-dev-container
-git clone git@github.com:wwt/ansible-navigator-dev-container.git /tmp/ansible-navigator-dev-container
-git checkout ttafsir-get-files
-
+git clone --branch ttafsir-get-files git@github.com:wwt/ansible-navigator-dev-container.git /tmp/ansible-navigator-dev-container
 
 # Copy devcontainer.template.json from the repo and rename to devcontainer.json
 mdkir .devcontainer
